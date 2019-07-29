@@ -21,19 +21,15 @@ public class ShellSort {
 
 
     public static void main(String[] args) {
-        int[] arr = new int[80000];
-        for (int i = 0; i < 80000; i++) {
-            arr[i] = (int) (Math.random() * 800000); // 生成一个[0, 8000000) 数
+        int[] arr = new int[4000*10000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (Math.random() * 8000*10000);
         }
-        System.out.println("排序前");
-        System.out.println(Arrays.toString(arr));
 
         long start = System.currentTimeMillis();
 //        shellSort1(arr);//交换式
         shellSort2(arr);//移位式--性能好很多
         long end = System.currentTimeMillis();
-        System.out.println("排序后");
-        System.out.println(Arrays.toString(arr));
         System.out.println("排序时间："+(end-start));
     }
     /**
@@ -44,7 +40,7 @@ public class ShellSort {
     public static void shellSort1(int[] arr) {
 
         int temp =0;
-        int count = 0;
+//        int count = 0;
 
         for (int grp = arr.length /2 ;  grp > 0 ; grp /= 2) {//分组
             for (int i = grp; i <arr.length ; i++) {//分组内排序
