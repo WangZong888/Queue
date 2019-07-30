@@ -47,7 +47,7 @@ public class RadixSort {
 
         //TODO 3.为了记录每个桶中，实际存放了多少个数据，定义一个一位数组来记录各个桶的放入数据的个数
         //可以理解为：
-        //比如：bucketElementCounts[0],记录的就是 bucket[0] 0号桶放入数据的个数
+        //比如：bucketElementCounts[0]=5,记录的就是 bucket[0] 0号桶放入数据的个数是5个
         int[] bucketElementCounts = new int[10];
 
         //开始循环
